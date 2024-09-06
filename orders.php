@@ -40,7 +40,7 @@
 								<tr>
 									<th>#</th>
 									<th>Data</th>
-									<th>Nota</th>
+									<th>Nota Fiscal</th>
 									<th>N.Pedido</th>
 									<th>Total</th>
 									<th>Status</th>
@@ -69,9 +69,9 @@
 									</td>
 									<td class="text-center">
 										<?php if($row['amount_tendered'] > 0): ?>
-											<span class="badge badge-success">Paid</span>
+											<span class="badge badge-success">Pago</span>
 										<?php else: ?>
-											<span class="badge badge-primary">Unpaid</span>
+											<span class="badge badge-primary">Não Pago</span>
 										<?php endif; ?>
 									</td>
 									<td class="text-center">
@@ -113,7 +113,7 @@
 		
 	// })
 	$('.view_order').click(function(){
-		uni_modal("Order  Details","view_order.php?id="+$(this).attr('data-id'),"mid-large")
+		uni_modal("Detalhes do Pedido","view_order.php?id="+$(this).attr('data-id'),"mid-large")
 		
 	})
 	$('.delete_order').click(function(){

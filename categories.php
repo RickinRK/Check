@@ -10,7 +10,7 @@
 			<form action="" id="manage-category">
 				<div class="card">
 					<div class="card-header">
-						    Category Form
+						    Formulario de Categoria
 				  	</div>
 					<div class="card-body">
 							<input type="hidden" name="id">
@@ -19,7 +19,7 @@
 								<input type="text" class="form-control" name="name">
 							</div>
 							<div class="form-group">
-								<label class="control-label">Description</label>
+								<label class="control-label">Descrição</label>
 								<textarea name="description" id="description" cols="30" rows="4" class="form-control"></textarea>
 							</div>
 					</div>
@@ -27,7 +27,7 @@
 					<div class="card-footer">
 						<div class="row">
 							<div class="col-md-12">
-								<button class="btn btn-sm btn-primary col-sm-3 offset-md-3"> Save</button>
+								<button class="btn btn-sm btn-primary col-sm-3 offset-md-3"> Salvar</button>
 								<button class="btn btn-sm btn-default col-sm-3" type="button" onclick="$('#manage-category').get(0).reset()"> Cancel</button>
 							</div>
 						</div>

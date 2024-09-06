@@ -70,7 +70,7 @@
         <!-- <div class="col-lg-12">
             <div class="card">
                 <div class="card-body">
-                    <?php echo "Bem-Vindo de Volta". $_SESSION['login_name']."!"  ?>
+                    <?php echo "Bem-Vindo de Volta!". $_SESSION['login_name']."!"  ?>
                     <hr>
                 </div>
             </div>      			
@@ -155,7 +155,7 @@
                                 <tr>
                                     <th>#</th>
                                     <th>Data</th>
-                                    <th>Nota</th>
+                                    <th>Nota Fiscal</th>
                                     <th>N.pedido</th>
                                     <th>Total</th>
                                     <th>Status</th>
@@ -252,7 +252,7 @@
                             end_load()
 
                         }else if(resp.status == 2){
-                            alert_toast("tracking id desconhecido.",'danger');
+                            alert_toast("Tracking ID desconhecido.",'danger');
                             end_load();
                         }
                     }

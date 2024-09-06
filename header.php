@@ -26,10 +26,10 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="assets/css/jquery-te-1.4.0.css">
-  
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
+
+  <script src="assets/vendor/jquery/jquery.min.js"></script>  <!-- PORRA DO NGC È AQ -->
   <script src="assets/DataTables/datatables.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script> <!-- PORRA DO NGC È AQ TB -->
   <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/venobox/venobox.min.js"></script>

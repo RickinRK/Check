@@ -9,7 +9,7 @@
 			<form action="" id="manage-product">
 				<div class="card">
 					<div class="card-header">
-						   Product Form
+						   Formulario de Produtos
 				  	</div>
 					<div class="card-body">
 							<input type="hidden" name="id">
@@ -27,15 +27,15 @@
 								</select>
 							</div>
 							<div class="form-group">
-								<label class="control-label">Name</label>
+								<label class="control-label">Nome</label>
 								<input type="text" class="form-control" name="name" required>
 							</div>
 							<div class="form-group">
-								<label class="control-label">Description</label>
+								<label class="control-label">Descrição</label>
 								<textarea name="description" id="description" cols="30" rows="4" class="form-control" required></textarea>
 							</div>
 							<div class="form-group">
-								<label class="control-label">Price</label>
+								<label class="control-label">Preço</label>
 								<input type="number" class="form-control text-right" name="price" required>
 							</div>
 							<div class="form-group">
@@ -49,7 +49,7 @@
 					<div class="card-footer">
 						<div class="row">
 							<div class="col-md-12 text-center">
-								<button class="btn btn-primary"> Save</button>
+								<button class="btn btn-primary"> Salvar</button>
 								<button class="btn btn-default" type="button" onclick="$('#manage-product').get(0).reset()"> Cancel</button>
 							</div>
 						</div>
@@ -63,9 +63,9 @@
 			<div class="col-md-12">
 				<div class="card">
 					<div class="card-header">
-						<b>Product List</b>
+						<b>Lista de Produtos</b>
 						<span class="float:right"><a class="btn btn-primary btn-block btn-sm col-sm-2 float-right" href="index.php?page=add-product" id="new_order">
-						<i class="fa fa-plus"></i> Add Product </a></span>
+						<i class="fa fa-plus"></i> Adicionar Produto </a></span>
 					</div>
 					<div class="card-body">
 						<table class="table table-hover">

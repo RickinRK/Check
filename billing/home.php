@@ -1,6 +1,5 @@
-<?php include '../db_connect.php' ?><!--  Orginal Author Name: Mayuri K. 
- for any PHP, Codeignitor, Laravel OR Python work contact me at mayuri.infospace@gmail.com  
- Visit website : www.mayurik.com -->  
+<?php include '../db_connect.php' ?>
+
 <style>
    span.float-right.summary_icon {
     font-size: 3rem;
@@ -157,7 +156,7 @@ endif;
                         </colgroup>
                        <thead>
                            <tr>
-                               <th>QNTD</th>
+                               <th>QTD</th>
                                <th>Pedido       
                                <th>Total</th>
                                <th></th>
@@ -234,11 +233,11 @@ endif;
       <div class="modal-body">
         <div class="container-fluid">
             <div class="form-group">
-                <label for="">Amount Payable</label>
+                <label for="">Valor a pagar</label>
                 <input type="number" class="form-control text-right" id="apayable" readonly="" value="">
             </div>
             <div class="form-group">
-                <label for="">Amount Tendered</label>
+                <label for="">Valor Pago</label>
                 <input type="text" class="form-control text-right" id="tendered" value="" autocomplete="off">
             </div>
             <div class="form-group">
@@ -274,10 +273,10 @@ endif;
 
 
         tr.append('<td><input type="hidden" name="item_id[]" id="" value=""><input type="hidden" name="product_id[]" id="" value="'+data.id+'">'+data.name+' <small class="psmall">('+(parseFloat(data.price).toLocaleString("en-US",{style:'decimal',minimumFractionDigits:2,maximumFractionDigits:2}))+')</small></td>') 
-
+        /*mudar US to pt-br, mas tb ta bugando se mudar e sinceramente não farei agr*/
 
         tr.append('<td class="text-right"><input type="hidden" name="price[]" id="" value="'+data.price+'"><input type="hidden" name="amount[]" id="" value="'+data.price+'"><span class="amount">'+(parseFloat(data.price).toLocaleString("en-US",{style:'decimal',minimumFractionDigits:2,maximumFractionDigits:2}))+'</span></td>') 
-
+        /*mudar US to pt-br aq tb*/
         
         tr.append('<td><span class="btn-rem"><b><i class="fa fa-trash-alt text"></i></b></span></td>')
         $('#o-list tbody').append(tr)
@@ -374,11 +373,11 @@ endif;
         if(tend == '')
             $(this).val('')
         else
-            $(this).val((parseFloat(tend).toLocaleString("en-US")))
+            $(this).val((parseFloat(tend).toLocaleString("en-US"))) /*mesma coisa*/
         tend = tend > 0 ? tend : 0;
         var amount=$('[name="total_amount"]').val()
         var change = parseFloat(tend) - parseFloat(amount)
-        $('#change').val(parseFloat(change).toLocaleString("en-US",{style:'decimal',minimumFractionDigits:2,maximumFractionDigits:2}))
+        $('#change').val(parseFloat(change).toLocaleString("en-US",{style:'decimal',minimumFractionDigits:2,maximumFractionDigits:2})) /*mesma coisa*/
    })
    
     $('#tendered').on('input',function(){

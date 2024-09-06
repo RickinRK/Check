@@ -69,7 +69,7 @@
       width: 100%;
       height: 100vh;
       background-color: #fff;
-      background-image: url("assets/uploads/loader.gif"); //MERDA DE GIF Q NAO CARREGA, TENHO Q CONSERTA ESSA MERDA E NAO SEI COMO
+      background-image: url("assets/uploads/loader.gif"); 
       background-repeat: no-repeat;
       background-position: center;
       background-size:500px;
@@ -122,7 +122,7 @@
         <div class="modal-body">
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" id='submit' onclick="$('#uni_modal form').submit()">Save</button>
+          <button type="button" class="btn btn-primary" id='submit' onclick="$('#uni_modal form').submit()">Salvar</button>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
         </div>
         </div>
@@ -228,7 +228,7 @@ window._conf = function($msg='',$func='',$params = []){
       startDate: '+3d'
   })
   $('.select2').select2({
-    placeholder:"Please select here",
+    placeholder:"Selecione aqui",
     width: "100%"
   })
 
@@ -238,7 +238,7 @@ window._conf = function($msg='',$func='',$params = []){
 
 <script type="text/javascript">
   function googleTranslateElementInit() {
-    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    new google.translate.TranslateElement({pageLanguage: 'pt-br'}, 'google_translate_element');
   }
   function onReady(callback) {
     var intervalID = window.setInterval(checkReady, 1000);

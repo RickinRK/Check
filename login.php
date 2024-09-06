@@ -36,6 +36,7 @@ header("location:index.php?page=home");
 	    left: 0;
 	    background-image: url('assets/uploads/backgroundcheck.webp');
 	    background-size: cover;
+		background-position: inherit;
 	}
 	main#main{
 		width:100%;
@@ -111,7 +112,7 @@ header("location:index.php?page=home");
 				if(resp == 1){
 					location.href ='index.php?page=home';
 				}else{
-					$('#login-form').prepend('<div class="alert alert-danger">Username ou Senha incorretos!.</div>')
+					$('#login-form').prepend('<div class="alert alert-danger">Usuario ou Senha incorretos!.</div>')
 					$('#login-form button[type="button"]').removeAttr('disabled').html('Login');
 				}
 			}

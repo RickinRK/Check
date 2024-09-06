@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 06/09/2024 às 03:48
+-- Tempo de geração: 06/09/2024 às 17:56
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.0.30
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `kruxton`
+-- Banco de dados: `checkdb`
 --
 
 -- --------------------------------------------------------
@@ -44,7 +44,8 @@ INSERT INTO `categories` (`id`, `name`, `description`) VALUES
 (4, 'Indian', 'Indian items'),
 (5, 'Sandwiches', 'Sandwiches Types'),
 (6, ' Japanese', ' Japanese Items'),
-(9, 'Thai', 'Thai Items');
+(9, 'Thai', 'Thai Items'),
+(10, 'Brazilian', 'Brazilian Itens');
 
 -- --------------------------------------------------------
 
@@ -66,12 +67,12 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `ref_no`, `total_amount`, `amount_tendered`, `order_number`, `date_created`) VALUES
-(1, '278998154978', 904, 1000, 1001, '2023-02-03 19:17:03'),
 (2, '091428583362', 1343, 0, 1005, '2023-02-03 19:17:34'),
 (3, '543076159999', 1622, 0, 1004, '2023-02-03 19:17:56'),
 (4, '967470759448', 742, 1000, 1003, '2023-02-03 19:20:26'),
 (5, '300535882264', 1354, 1400, 1006, '2023-02-03 20:12:43'),
-(6, '505367348044', 520, 520, 1, '2024-09-03 18:57:11');
+(6, '505367348044', 520, 520, 1, '2024-09-03 18:57:11'),
+(7, '044487890218', 0, 0, 0, '2024-09-06 12:54:13');
 
 -- --------------------------------------------------------
 
@@ -93,8 +94,6 @@ CREATE TABLE `order_items` (
 --
 
 INSERT INTO `order_items` (`id`, `order_id`, `product_id`, `qty`, `price`, `amount`) VALUES
-(1, 1, 8, 1, 452, 452),
-(2, 1, 7, 1, 452, 452),
 (3, 2, 3, 1, 520, 520),
 (4, 2, 6, 1, 443, 443),
 (5, 2, 10, 1, 80, 80),
@@ -140,7 +139,8 @@ INSERT INTO `products` (`id`, `category_id`, `name`, `description`, `price`, `st
 (8, 4, 'Pakora', 'Pakoras are made by coating ingredients, usually vegetables, in a spiced batter, then deep frying them. ', 452, 1),
 (9, 4, 'Vada Pav', 'Vada pav, alternatively spelt wada pao, is a vegetarian fast food dish native to the Indian state of Maharashtra. ', 50, 1),
 (10, 4, 'Paratha', 'Paratha is a flatbread native to South Asia, prevalent throughout the modern-day nations of India, Sri Lanka, Pakistan, Nepal, Bangladesh, Maldives, Afghanistan, Myanmar, Malaysia, Singapore, Mauritius, Fiji, Guyana, Suriname, and Trinidad and Tobago where wheat is the traditional staple.', 80, 1),
-(11, 9, 'Pad Thai', 'Pad thai, phat thai, or phad thai, is a stir-fried rice noodle dish commonly served as a street food in Thailand as part of the countrys cuisine.', 452, 1);
+(11, 9, 'Pad Thai', 'Pad thai, phat thai, or phad thai, is a stir-fried rice noodle dish commonly served as a street food in Thailand as part of the countrys cuisine.', 452, 1),
+(12, 10, 'Computador do senai', 'Pc ruim, da tela azul, mas é usavel ate!', 10, 1);
 
 -- --------------------------------------------------------
 
@@ -162,7 +162,7 @@ CREATE TABLE `system_settings` (
 --
 
 INSERT INTO `system_settings` (`id`, `name`, `email`, `contact`, `cover_img`, `about_content`) VALUES
-(1, 'Check', 'mayuri.infospace@gmail.com', '9000000000', '', '&lt;p&gt;Check by VASP&lt;/p&gt;');
+(1, 'Check', 'check@gmail.com', '9000000000', '', '&lt;p&gt;Check by &lt;strong&gt;VASP&lt;/strong&gt;&lt;/p&gt;');
 
 -- --------------------------------------------------------
 
@@ -183,8 +183,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `username`, `password`, `type`) VALUES
-(3, 'Check - ADM', 'mayuri.infospace@gmail.com', 'cd92a26534dba48cd785cdcc0b3e6bd1', 1),
-(4, 'CHECK - FUNCIONARIO', 'checkvasp@gmail.com', '0589b186ddf5ee42a643c93415616b3f', 2);
+(3, 'Check - ADM', 'check@gmail.com', 'cd92a26534dba48cd785cdcc0b3e6bd1', 1),
+(4, 'CHECK - FUNCIONARIO', 'checkvasp@gmail.com', 'aa95f788645119fe3b5abef12be4956d', 2);
 
 --
 -- Índices para tabelas despejadas
@@ -234,13 +234,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de tabela `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de tabela `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de tabela `order_items`
@@ -252,7 +252,7 @@ ALTER TABLE `order_items`
 -- AUTO_INCREMENT de tabela `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de tabela `system_settings`

@@ -22,7 +22,7 @@
         <img src="../assets/uploads/logo.png" width="200px">
       </div>
      <div class="col-md-8 float-left text-dark mt-3">
-       <!-- <p style="color: red; font-size: 14px;"><b>Alert</b> 
+       <!-- <p style="color: red; font-size: 14px;"><b>Alerta</b> 
       </div>
                 <div id="google_translate_element"></div>
       <div class="float-right mt-3">

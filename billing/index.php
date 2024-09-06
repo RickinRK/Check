@@ -12,9 +12,7 @@
 <?php
  include('./header.php'); 
  // include('./auth.php'); 
- ?><!--  Orginal Author Name: Mayuri K. 
- for any PHP, Codeignitor, Laravel OR Python work contact me at mayuri.infospace@gmail.com  
- Visit website : www.mayurik.com -->  
+ ?>
 
 </head>
 <style>
@@ -256,20 +254,21 @@ window._conf = function($msg='',$func='',$params = []){
       })
   })
   $('.datetimepicker').datetimepicker({
-      format:'Y/m/d H:i',
+      format:'Y/m/d H:i', /* se mudar pra br buga, pesquisar sobre */
       startDate: '+3d'
   })
   $('.select2').select2({
-    placeholder:"Please select here",
+    placeholder:"Por Favor, selecione aqui!",
     width: "100%"
   })
 </script>   
+
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 
         <script type="text/javascript">
 function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+  new google.translate.TranslateElement({pageLanguage: 'pt-br'}, 'google_translate_element');
 }
 
 function onReady(callback) {

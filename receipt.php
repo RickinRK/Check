@@ -34,7 +34,8 @@ $items = $conn->query("SELECT o.*,p.name FROM order_items o inner join products 
 
 </style>
 <div class="container-fluid">
-	<p class="text-center"><b><?php echo $amount_tendered > 0 ? "Receipt" : "Bill" ?></b></p>
+	<img src="assets/uploads/logo.png" alt="Logo CHECK" width="80" height="40">
+	<p class="text-center"><b><?php echo $amount_tendered > 0 ? "Nota Fiscal" : "Bill" ?></b></p>
 	<hr>
 	<div class="flex">
 		<div class="w-100">
@@ -49,7 +50,7 @@ $items = $conn->query("SELECT o.*,p.name FROM order_items o inner join products 
 	<table width="100%">
 		<thead>
 			<tr>
-				<td><b>QNTD</b></td>
+				<td><b>QTD</b></td>
 				<td><b>Pedido</b></td>
 				<td class="text-right"><b>Total</b></td>
 			</tr>
@@ -77,11 +78,11 @@ $items = $conn->query("SELECT o.*,p.name FROM order_items o inner join products 
 
 
 			<tr>
-				<td><b>Valor Tendered</b></td>
+				<td><b>Valor Pago</b></td>
 				<td class="text-right"><b><?php echo number_format($amount_tendered,2) ?></b></td>
 			</tr>
 			<tr>
-				<td><b>Mudar</b></td>
+				<td><b>A pagar</b></td>
 				<td class="text-right"><b><?php echo number_format($amount_tendered - $total_amount,2) ?></b></td>
 			</tr>
 		<?php endif; ?>
