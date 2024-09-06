@@ -7,11 +7,13 @@ ________________________________________________________________________________
 - A baxio, ha dois acessos ADMIN (Com acesso total ao sistema Check) e FUNCIONARIO (Sistema limitado)
 ____________________________________________________________________________________________________________
 ADMIN (ACESSO)
+
 -Username : check@gmail.com
 
 -Password : rootadmin
 ____________________________________________________________________________________________________________
 FUNCIONARIO (ACESSO)
+
 -Uername staff: checkvasp@gmail.com
 
 -Password: rootstaff
