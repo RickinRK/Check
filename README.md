@@ -1,4 +1,4 @@
-Check - Sistema de gerenciamento. 
+Check - Sistema de gerenciamento (BETA)
 ____________________________________________________________________________________________________________
 - Antes de acessar
 
