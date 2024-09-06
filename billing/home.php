@@ -87,14 +87,14 @@ endif;
         <div class="col-lg-8  p-field">
             <div class="card ">
                 <div class="card-header text-dark">
-                    <b>Products</b>
+                    <b>Produtos</b>
                 </div>
                 <div class="card-body row" id='prod-list'>
                     <div class="col-md-12">
                       <!--    <b>Category</b> -->
                         <div class=" row justify-content-start align-items-center" id="cat-list">
                             <div class="mx-3 cat-item" data-id = 'all'>    
-                                <button class="btn btn-primary"><b class="text-white">All</b></button>
+                                <button class="btn btn-primary"><b class="text-white">Todos</b></button>
                             </div>
                             <?php 
                             $qry = $conn->query("SELECT * FROM categories order by name asc");
@@ -126,8 +126,8 @@ endif;
                 </div>
             <div class="card-footer">
                 <div class="row justify-content-center">
-                    <div class="btn btn btn-sm col-sm-3 btn-primary mr-2" type="button" id="pay">Pay</div>
-                    <div class="btn btn btn-sm col-sm-3 btn-primary" type="button" id="save_order">Pay later</div>
+                    <div class="btn btn btn-sm col-sm-3 btn-primary mr-2" type="button" id="pay">Pagar</div>
+                    <div class="btn btn btn-sm col-sm-3 btn-primary" type="button" id="save_order">Pagar depois</div>
                 </div>
             </div>
             </div>      			
@@ -135,7 +135,7 @@ endif;
           <div class="col-lg-4">
            <div class="card">
                 <div class="card-header text-dark">
-                    <b>Order List</b>
+                    <b>Lista de Pedidos</b>
                 <span class="float:right"><a class="btn btn-primary btn-sm col-sm-3 float-right" href="../index.php" id="">
                     <i class="fa fa-home"></i> Home 
                 </a></span>
@@ -157,9 +157,9 @@ endif;
                         </colgroup>
                        <thead>
                            <tr>
-                               <th>QTY</th>
-                               <th>Order</th>
-                               <th>Amount</th>
+                               <th>QNTD</th>
+                               <th>Pedido       
+                               <th>Total</th>
                                <th></th>
                            </tr>
                        </thead>
@@ -226,7 +226,7 @@ endif;
     <div class="modal-dialog modal-dialog-centered modal-md" role="document">
       <div class="modal-content">
         <div class="modal-header">
-        <h5 class="modal-title"><b>Pay</b></h5>
+        <h5 class="modal-title"><b>Pagar</b></h5>
          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -242,14 +242,14 @@ endif;
                 <input type="text" class="form-control text-right" id="tendered" value="" autocomplete="off">
             </div>
             <div class="form-group">
-                <label for="">Change</label>
+                <label for="">Mudar</label>
                 <input type="text" class="form-control text-right" id="change" value="0.00" readonly="">
             </div>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="submit" class="btn btn-primary btn-sm"  form="manage-order">Pay</button>
-        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+        <button type="submit" class="btn btn-primary btn-sm"  form="manage-order">Pagar</button>
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancelar</button>
       </div>
       </div>
     </div>
@@ -396,7 +396,7 @@ endif;
             success:function(resp){
                 if(resp > 0){
                     if($('[name="total_tendered"]').val() > 0){
-                        alert_toast("Data successfully saved.",'success')
+                        alert_toast("Salvo.",'success')
                         setTimeout(function(){
                             var nw = window.open('../receipt.php?id='+resp,"_blank","width=900,height=600")
                             setTimeout(function(){
@@ -408,7 +408,7 @@ endif;
                             },500)
                         },500)
                     }else{
-                        alert_toast("Data successfully saved.",'success')
+                        alert_toast("Salvo.",'success')
                         setTimeout(function(){
                             location.reload()
                         },500)

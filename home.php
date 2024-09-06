@@ -155,8 +155,8 @@
                                 <tr>
                                     <th>#</th>
                                     <th>Data</th>
-                                    <th>Invoice</th>
-                                    <th>N pedido</th>
+                                    <th>Nota</th>
+                                    <th>N.pedido</th>
                                     <th>Total</th>
                                     <th>Status</th>
                                <!-- LEMBRETE: Tenho que mexer no css para ajeitar essa droga aq -->
@@ -217,7 +217,7 @@
             success:function(resp){
                 resp=JSON.parse(resp)
                 if(resp.status==1){
-                    alert_toast("Data successfully saved",'success')
+                    alert_toast("Salvo",'success')
                     setTimeout(function(){
                         location.reload()
                     },800)
@@ -252,7 +252,7 @@
                             end_load()
 
                         }else if(resp.status == 2){
-                            alert_toast("Unknow tracking id.",'danger');
+                            alert_toast("tracking id desconhecido.",'danger');
                             end_load();
                         }
                     }

@@ -72,13 +72,13 @@
 							<thead>
 								<tr>
 									<th>#</th>
-									<th>Category</th>
-									<th>Name</th>
-									<th>Description</th>
-									<th>Price</th>
+									<th>Categoria</th>
+									<th>Nome</th>
+									<th>Descrição</th>
+									<th>Preço</th>
 									<th>Status</th>
 									
-									<th>Action</th>
+									<th>Ação</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -155,14 +155,14 @@
 		    type: 'POST',
 			success:function(resp){
 				if(resp==1){
-					alert_toast("Data successfully added",'success')
+					alert_toast("Adicionado",'success')
 					setTimeout(function(){
 						location.reload()
 					},1500)
 
 				}
 				else if(resp==2){
-					alert_toast("Data successfully updated",'success')
+					alert_toast("Atualizado",'success')
 					setTimeout(function(){
 						location.reload()
 					},1500)
@@ -187,7 +187,7 @@
 		end_load()
 	})
 	$('.delete_product').click(function(){
-		_conf("Are you sure to delete this product?","delete_product",[$(this).attr('data-id')])
+		_conf("Tem certeza de que deseja excluir este produto?","delete_product",[$(this).attr('data-id')])
 	})
 	function delete_product($id){
 		start_load()
@@ -197,7 +197,7 @@
 			data:{id:$id},
 			success:function(resp){
 				if(resp==1){
-					alert_toast("Data successfully deleted",'success')
+					alert_toast("Deletado",'success')
 					setTimeout(function(){
 						location.reload()
 					},1500)

@@ -27,10 +27,10 @@
 			<div class="col-md-12">
 				<div class="card">
 					<div class="card-header">
-						<b>List of Orders </b>
+						<b>Lista dos Pedidos </b>
 
 						<span class="float:right"><a class="btn btn-primary btn-sm col-sm-2 float-right" href="billing/index.php" id="new_order">
-					<i class="fa fa-plus"></i> New 
+					<i class="fa fa-plus"></i> Novo
 				</a></span>
 
 					</div>
@@ -39,12 +39,12 @@
 							<thead>
 								<tr>
 									<th>#</th>
-									<th>Date</th>
-									<th>Invoice</th>
-									<th>Order Number</th>
-									<th>Amount</th>
+									<th>Data</th>
+									<th>Nota</th>
+									<th>N.Pedido</th>
+									<th>Total</th>
 									<th>Status</th>
-									<th>Action</th>
+									<th>Ação</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -117,7 +117,7 @@
 		
 	})
 	$('.delete_order').click(function(){
-		_conf("Are you sure to delete this order ?","delete_order",[$(this).attr('data-id')])
+		_conf("Tem certeza de que deseja excluir este pedido? ","delete_order",[$(this).attr('data-id')])
 	})
 	function delete_order($id){
 		start_load()
@@ -127,7 +127,7 @@
 			data:{id:$id},
 			success:function(resp){
 				if(resp==1){
-					alert_toast("Data successfully deleted",'success')
+					alert_toast("Deletado",'success')
 					setTimeout(function(){
 						location.reload()
 					},1500)

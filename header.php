@@ -37,8 +37,12 @@
   <script src="assets/vendor/counterup/counterup.min.js"></script>
   <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
   <script src="assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
-    <script type="text/javascript" src="assets/js/select2.min.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.datetimepicker.full.min.js"></script>
-    <script type="text/javascript" src="assets/font-awesome/js/all.min.js"></script>
+  <script type="text/javascript" src="assets/js/select2.min.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.datetimepicker.full.min.js"></script>
+  <script type="text/javascript" src="assets/font-awesome/js/all.min.js"></script>  
   <script type="text/javascript" src="assets/js/jquery-te-1.4.0.min.js" charset="utf-8"></script>
+  
+  <!-- CHATBOT IA - GAMBIARRA, MAS FUNCIONOU (falta configurar o GPT 4.0, ta basico e sem sql on) -->
+  <script src="https://cdn.botpress.cloud/webchat/v2.1/inject.js"></script>
+  <script src="https://mediafiles.botpress.cloud/feb415ab-f438-43f0-86cc-818ee4440250/webchat/v2.1/config.js"></script>
 

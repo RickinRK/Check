@@ -1575,7 +1575,7 @@ a.nav-item {
     font-weight: 400;
 }
 .nav-item.active, .nav-item.active:hover{
-    background-color: #123e59;
+    background-color: #2E8B57;
     color: #fffafa;
 }
 a.nav-item:hover{
@@ -1675,8 +1675,8 @@ span.select2-selection__arrow {
         /*padding: .0001rem .2rem;*/
   }
 .btn-primary, .btn-primary:hover{
-    background-color: #123e59;
-    border-color: #123e59;
+    background-color: #2E8B57;
+    border-color: #2E8B57;
 }
 table.dataTable.no-footer{
   border: 0 !important;

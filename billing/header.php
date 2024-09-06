@@ -14,9 +14,6 @@
   <link href="../assets/css/jquery.datetimepicker.min.css" rel="stylesheet">
   <link href="../assets/css/select2.min.css" rel="stylesheet">
 
-<!--  Orginal Author Name: Mayuri K. 
- for any PHP, Codeignitor, Laravel OR Python work contact me at mayuri.infospace@gmail.com  
- Visit website : www.mayurik.com -->  
   <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="../assets/css/jquery-te-1.4.0.css">
@@ -35,8 +32,7 @@
   <script src="../assets/js/jquery.datetimepicker.full.min.js"></script>
   <script src="../assets/font-awesome/js/all.min.js"></script>
   <script src="../assets/js/jquery-te-1.4.0.min.js"></script>
-
-<!--  Orginal Author Name: Mayuri K. 
- for any PHP, Codeignitor, Laravel OR Python work contact me at mayuri.infospace@gmail.com  
- Visit website : www.mayurik.com -->  
+  <script src="https://cdn.botpress.cloud/webchat/v2.1/inject.js"></script>
+  <script src="https://mediafiles.botpress.cloud/feb415ab-f438-43f0-86cc-818ee4440250/webchat/v2.1/config.js"></script>
+ 
 

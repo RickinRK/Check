@@ -35,7 +35,7 @@
 								<textarea name="description" id="description" cols="30" rows="4" class="form-control" required></textarea>
 							</div>
 							<div class="form-group">
-								<label class="control-label">Price</label>
+								<label class="control-label">Preço</label>
 								<input type="number" class="form-control text-right" name="price" required>
 							</div>
 							<div class="form-group">
@@ -50,7 +50,7 @@
 						<div class="row">
 							<div class="col-md-12 text-center">
 								<button class="btn btn-primary"> Salvar</button>
-								<button class="btn btn-default" type="button" onclick="$('#manage-product').get(0).reset()"> Cancel</button>
+								<button class="btn btn-default" type="button" onclick="$('#manage-product').get(0).reset()"> Cancelar</button>
 							</div>
 						</div>
 					</div>

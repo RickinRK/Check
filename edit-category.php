@@ -27,7 +27,7 @@
 						<div class="row">
 							<div class="col-md-12">
 								<button class="btn btn-primary "> Salvar</button>
-								<button class="btn btn-default" type="button" onclick="$('#manage-category').get(0).reset()"> Cancel</button>
+								<button class="btn btn-default" type="button" onclick="$('#manage-category').get(0).reset()"> Cancelar</button>
 							</div>
 						</div>
 					</div>

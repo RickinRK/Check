@@ -1,5 +1,5 @@
   <!DOCTYPE html>
-  <html lang="en">
+  <html lang="pt-br">
   	
   <?php session_start(); ?>
   <head>
@@ -69,10 +69,11 @@
       width: 100%;
       height: 100vh;
       background-color: #fff;
-      background-image: url("assets/uploads/loader.gif");
+      background-image: url("assets/uploads/loader.gif"); //MERDA DE GIF Q NAO CARREGA, TENHO Q CONSERTA ESSA MERDA E NAO SEI COMO
       background-repeat: no-repeat;
       background-position: center;
       background-size:500px;
+      
   }
   </style>
 

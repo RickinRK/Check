@@ -35,7 +35,7 @@
 								<textarea name="description" id="description" cols="30" rows="4" class="form-control" required></textarea>
 							</div>
 							<div class="form-group">
-								<label class="control-label">Price</label>
+								<label class="control-label">Preço/label>
 								<input type="number" class="form-control text-right" name="price" required>
 							</div>
 							<div class="form-group">
@@ -151,6 +151,3 @@
 	}
 	$('table').dataTable()
 </script>
-<!--  Orginal Author Name: Mayuri K. 
- for any PHP, Codeignitor, Laravel OR Python work contact me at mayuri.infospace@gmail.com  
- Visit website : www.mayurik.com -->  

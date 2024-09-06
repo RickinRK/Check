@@ -39,19 +39,19 @@ $items = $conn->query("SELECT o.*,p.name FROM order_items o inner join products 
 	<div class="flex">
 		<div class="w-100">
 			<?php if($amount_tendered > 0): ?>
-			<p>Invoice Number: <b><?php echo $ref_no ?></b></p>
+			<p>N.Nota: <b><?php echo $ref_no ?></b></p>
 		<?php endif; ?>
-			<p>Date: <b><?php echo date("M d, Y",strtotime($date_created)) ?></b></p>
+			<p>Data: <b><?php echo date("M d, Y",strtotime($date_created)) ?></b></p>
 		</div>
 	</div>
 	<hr>
-	<p><b>Order List</b></p>
+	<p><b>Lista de Pedidos</b></p>
 	<table width="100%">
 		<thead>
 			<tr>
-				<td><b>QTY</b></td>
-				<td><b>Order</b></td>
-				<td class="text-right"><b>Amount</b></td>
+				<td><b>QNTD</b></td>
+				<td><b>Pedido</b></td>
+				<td class="text-right"><b>Total</b></td>
 			</tr>
 		</thead>
 		<tbody>
@@ -70,18 +70,18 @@ $items = $conn->query("SELECT o.*,p.name FROM order_items o inner join products 
 	<table width="100%">
 		<tbody>
 			<tr>
-				<td><b>Total Amount</b></td>
+				<td><b>Valor Total</b></td>
 				<td class="text-right"><b><?php echo number_format($total_amount,2) ?></b></td>
 			</tr>
 			<?php if($amount_tendered > 0): ?>
 
 
 			<tr>
-				<td><b>Amount Tendered</b></td>
+				<td><b>Valor Tendered</b></td>
 				<td class="text-right"><b><?php echo number_format($amount_tendered,2) ?></b></td>
 			</tr>
 			<tr>
-				<td><b>Change</b></td>
+				<td><b>Mudar</b></td>
 				<td class="text-right"><b><?php echo number_format($amount_tendered - $total_amount,2) ?></b></td>
 			</tr>
 		<?php endif; ?>
@@ -89,6 +89,6 @@ $items = $conn->query("SELECT o.*,p.name FROM order_items o inner join products 
 		</tbody>
 	</table>
 	<hr>
-	<p class="text-center"><b>Order No.</b></p>
+	<p class="text-center"><b>N.Pedido</b></p>
 	<h4 class="text-center"><b><?php echo $order_number ?></b></h4>
 </div>

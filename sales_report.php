@@ -7,7 +7,7 @@
         <div class="card">
             <div class="card_body">
             <div class="row justify-content-center pt-4">
-                <label for="" class="mt-2">Month</label>
+                <label for="" class="mt-2">Mês</label>
                 <div class="col-sm-3">
                     <input type="month" name="month" id="month" value="<?php echo $month ?>" class="form-control">
                 </div>
@@ -18,10 +18,10 @@
                     <thead>
                         <tr>
                             <th class="text-center">#</th>
-                            <th class="">Date</th>
-                            <th class="">Invoice</th>
-                            <th class="">Order Number</th>
-                            <th class="">Amount</th>
+                            <th class="">Data</th>
+                            <th class="">Nota Fiscal</th>
+                            <th class="">N.Pedido</th>
+                            <th class="">Total</th>
                         </tr>
                     </thead>
                     <!--  Orginal Author Name: Mayuri K. 
@@ -118,6 +118,3 @@ $('#print').click(function(){
 		}, 500);
 	})
 </script>
-<!--  Orginal Author Name: Mayuri K. 
- for any PHP, Codeignitor, Laravel OR Python work contact me at mayuri.infospace@gmail.com  
- Visit website  - www.mayurik.com  -->  
