@@ -1,5 +1,10 @@
 URL : http://localhost/kruxton
-Username : mayuri.infospace@gmail.com
+
+Username : check@gmail.com
+
 Password : rootadmin
 
-CUZINHO
+Uername staff: checkvasp@gmail.com
+
+Password: rootstaff
+
