@@ -1,5 +1,14 @@
-<?php 
+<?php
+$host = 'checkdb.mysql.database.azure.com';
+$port = 3306;
+$username = 'checkdb';
+$password = 'Henrique3005';
+$dbname = 'checkdb';
 
-$conn= new mysqli('localhost','root','','checkdb')or die("Não foi possivel conectar ao MySql".mysqli_error($con));
+$conn = new mysqli($host, $username, $password, $dbname, $port);
 
-//Vou ter q adaptar isso a um MySql web para utilizar a  integração com IA x SQL
+if ($conn->connect_error) {
+    die("Falha na conexão: " . $conn->connect_error);
+}
+// Remova a linha $conn->close(); daqui para evitar o fechamento precoce
+?>
