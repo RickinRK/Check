@@ -18,7 +18,7 @@
 
 - **Integração com o Azure**: O sistema agora está hospedado no Azure (Microsoft), utilizando um banco de dados MySQL. Não é mais necessário configurar o banco de dados manualmente.
 - **Inteligência Artificial Otimizada**: Estamos reconfigurando a IA para restringir seu uso ao gerenciamento interno, com suporte direto ao banco de dados via Azure.
-
+- **Otimização do sistema**: Alguns aspectos que estavam mal otimizados foram corrigidos para melhor desempenho.
 ---
 
 ### **Acessos ao Sistema**
