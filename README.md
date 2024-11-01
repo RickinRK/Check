@@ -1,4 +1,5 @@
-                       **Check - Sistema de gerenciamento (BETA V.3)**
+**Check - Sistema de gerenciamento (BETA V.3)**
+![Logo Check](https://i.ibb.co/sgvq4QZ/logo.png)
 ____________________________________________________________________________________________________________
 **Antes de acessar:**
 
