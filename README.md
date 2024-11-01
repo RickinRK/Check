@@ -1,26 +1,36 @@
-**Check - Sistema de gerenciamento (BETA V.3)**
-![Logo Check](https://i.ibb.co/sgvq4QZ/logo.png)
-____________________________________________________________________________________________________________
-**Antes de acessar:**
+# **Check - Sistema de Gerenciamento**  
+### BETA V.3
 
-- O sistema tem um chatbot baseado em GPT 4.0, para acessa-lo, clique no botao no canto inferior direito.
-- A baixo, ha dois acessos ADMIN (Com acesso total ao sistema Check) e FUNCIONARIO (Sistema limitado e restrito)
-____________________________________________________________________________________________________________
-*O que mudou da ultima versão?*
+<p align="center">
+  <img src="https://i.ibb.co/sgvq4QZ/logo.png" alt="Logo Check" width="300"/>
+</p>
 
-- O Check agora é hospedado via Azure by Microsoft em MySQL, não sendo mais necessario configurar manualmente o DB.
-- Estamos reconfigurando a inteligencia artificial para se restringir somente ao sistema de gerenciamento e conseguir se conectar no db via Azure
-____________________________________________________________________________________________________________
-**ACESSOS AO SISTEMA:**
-____________________________________________________________________________________________________________
-ADMIN (ACESSO)
+---
 
--Username : check@gmail.com
+### **Antes de Acessar**
 
--Password : rootadmin
-____________________________________________________________________________________________________________
-FUNCIONARIO (ACESSO)
+- **Chatbot Inteligente**: Nosso sistema agora conta com um chatbot baseado no modelo GPT-4.0. Para interagir, basta clicar no ícone no canto inferior direito da tela.
+- **Modos de Acesso**: Há duas opções de login – **ADMIN** com acesso completo e **FUNCIONÁRIO** com acesso restrito e limitado.
 
--Uername staff: checkvasp@gmail.com
+---
 
--Password: rootstaff
+### **O que há de Novo?**
+
+- **Integração com o Azure**: O sistema agora está hospedado no Azure (Microsoft), utilizando um banco de dados MySQL. Não é mais necessário configurar o banco de dados manualmente.
+- **Inteligência Artificial Otimizada**: Estamos reconfigurando a IA para restringir seu uso ao gerenciamento interno, com suporte direto ao banco de dados via Azure.
+
+---
+
+### **Acessos ao Sistema**
+
+#### **ADMIN**
+- **Usuário**: check@gmail.com  
+- **Senha**: rootadmin
+
+#### **FUNCIONÁRIO**
+- **Usuário**: checkvasp@gmail.com  
+- **Senha**: rootstaff
+
+---
+
+Essas informações devem ajudá-lo a acessar e explorar o sistema com maior facilidade.
