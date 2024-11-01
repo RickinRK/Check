@@ -1,6 +1,6 @@
 Check - Sistema de gerenciamento (BETA V.3)
 ____________________________________________________________________________________________________________
-- Antes de acessar
+Antes de acessar:
 
 - O sistema tem um chatbot baseado em GPT 4.0, para acessa-lo, clique no botao no canto inferior direito.
 - A baixo, ha dois acessos ADMIN (Com acesso total ao sistema Check) e FUNCIONARIO (Sistema limitado e restrito)
