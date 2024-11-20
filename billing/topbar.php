@@ -18,18 +18,18 @@
       </div>
       
       <div class="col-md-2 float-left text-dark">
-        <!-- <large><b><?php echo isset($_SESSION['system']['name']) ? $_SESSION['system']['name'] : '' ?></b></large> -->
+        <large><b><?php echo isset($_SESSION['system']['name']) ? $_SESSION['system']['name'] : '' ?></b></large> 
         <img src="../assets/uploads/logo.png" width="200px">
       </div>
      <div class="col-md-8 float-left text-dark mt-3">
-       <!-- <p style="color: red; font-size: 14px;"><b>Alerta</b> 
+     <p style="color: red; font-size: 14px;"><b>Sistema de caixa</b> 
       </div>
                 <div id="google_translate_element"></div>
       <div class="float-right mt-3">
         <div class=" dropdown mr-4">
             <a href="#" class="text-dark dropdown-toggle"  id="account_settings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['login_name'] ?> </a>
               <div class="dropdown-menu" aria-labelledby="account_settings">
-                <a class="dropdown-item" href="javascript:void(0)" id="manage_my_account"><i class="fa fa-cog"></i> Manage Account</a>
+                <a class="dropdown-item" href="javascript:void(0)" id="manage_my_account"><i class="fa fa-cog"></i> Gerenciar conta</a>
                 <a class="dropdown-item" href="../ajax.php?action=logout"><i class="fa fa-power-off"></i> Logout</a>
               </div>
         </div>

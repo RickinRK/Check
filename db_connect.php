@@ -1,7 +1,7 @@
 <?php
-$host = 'checkdb.mysql.database.azure.com';
+$host = 'checkdatabase.mysql.database.azure.com';
 $port = 3306;
-$username = 'checkdb';
+$username = 'check';
 $password = 'Henrique3005';
 $dbname = 'checkdb';
 
