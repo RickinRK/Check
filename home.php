@@ -3,8 +3,8 @@
 <script type="text/javascript">
 
 <?php
-// Consulta para o gráfico de vendas por categoria
-$data = [["Category", "Sold Per Day"]]; // Títulos das colunas
+// Dados para o gráfico de rosca (PieChart) - Vendas por categoria
+$dataCategories = [["Category", "Sold Per Day"]];
 $query = $conn->query("
     SELECT c.name AS category, COUNT(oi.id) AS total
     FROM order_items oi
@@ -13,11 +13,19 @@ $query = $conn->query("
     GROUP BY c.name
 ");
 while ($row = $query->fetch_assoc()) {
-    $data[] = [$row['category'], (int)$row['total']];
+    $dataCategories[] = [$row['category'], (int)$row['total']];
 }
-$jsonData = json_encode($data); // Dados no formato JSON para uso no JavaScript
+$jsonDataCategories = json_encode($dataCategories);
 
-// Consultas para estatísticas do painel
+// Dados para o gráfico de área (AreaChart) - Itens pagos e não pagos
+$dataOrders = [["Status", "Quantidade"]];
+$paidOrders = $conn->query("SELECT COUNT(*) AS total FROM orders WHERE amount_tendered > 0")->fetch_assoc()['total'] ?? 0;
+$unpaidOrders = $conn->query("SELECT COUNT(*) AS total FROM orders WHERE amount_tendered = 0")->fetch_assoc()['total'] ?? 0;
+$dataOrders[] = ["Pagos", (int)$paidOrders];
+$dataOrders[] = ["Não pagos", (int)$unpaidOrders];
+$jsonDataOrders = json_encode($dataOrders);
+
+//Categorias para os hub superiores
 $totalCategorias = $conn->query("SELECT COUNT(*) AS total FROM categories")->fetch_assoc()['total'] ?? 0;
 $totalProdutos = $conn->query("SELECT COUNT(*) AS total FROM products")->fetch_assoc()['total'] ?? 0;
 $totalPedidos = $conn->query("SELECT COUNT(*) AS total FROM orders")->fetch_assoc()['total'] ?? 0;
@@ -25,60 +33,34 @@ $totalUsuarios = $conn->query("SELECT COUNT(*) AS total FROM users")->fetch_asso
 ?>
 
 google.charts.load('current', {'packages':['corechart']});
-google.charts.setOnLoadCallback(drawChart);
+google.charts.setOnLoadCallback(drawCharts);
 
-function drawChart() {
-    // Usando os dados vindos do PHP
-    var data = google.visualization.arrayToDataTable(<?php echo $jsonData; ?>);
-
-    var options = {
-        title: 'Vendas Recentes',
-        pieHole: 0.4 // Gráfico de rosca
+function drawCharts() {
+    // Gráfico de rosca (PieChart)
+    var dataCategories = google.visualization.arrayToDataTable(<?php echo $jsonDataCategories; ?>);
+    var optionsCategories = {
+        title: 'Vendas Recentes por Categoria',
+        pieHole: 0.4
     };
+    var chartCategories = new google.visualization.PieChart(document.getElementById('piechart'));
+    chartCategories.draw(dataCategories, optionsCategories);
 
-    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-    chart.draw(data, options);
+    // Gráfico de área (AreaChart)
+    var dataOrders = google.visualization.arrayToDataTable([
+        ['Status', 'Quantidade'],
+        ['Pagos', <?php echo $paidOrders; ?>],
+        ['Não pagos', <?php echo $unpaidOrders; ?>]
+    ]);
+    var optionsOrders = {
+        title: 'Pedidos Pagos e Não Pagos',
+        hAxis: {title: 'Status', titleTextStyle: {color: '#333'}},
+        vAxis: {minValue: 0},
+        legend: {position: 'top'}
+    };
+    var chartOrders = new google.visualization.AreaChart(document.getElementById('areachart'));
+    chartOrders.draw(dataOrders, optionsOrders);
 }
 </script>
-
-<style>
-   span.float-right.summary_icon {
-    font-size: 3rem;
-    position: absolute;
-    right: 1rem;
-    top: 0;
-}
-.imgs{
-		margin: .5em;
-		max-width: calc(100%);
-		max-height: calc(100%);
-	}
-	.imgs img{
-		max-width: calc(100%);
-		max-height: calc(100%);
-		cursor: pointer;
-	}
-	#imagesCarousel,#imagesCarousel .carousel-inner,#imagesCarousel .carousel-item{
-		height: 60vh !important;background: black;
-	}
-	#imagesCarousel .carousel-item.active{
-		display: flex !important;
-	}
-	#imagesCarousel .carousel-item-next{
-		display: flex !important;
-	}
-	#imagesCarousel .carousel-item img{
-		margin: auto;
-	}
-    	#imagesCarousel img{ 
-		width: auto!important;
-		height: auto!important;
-		max-height: calc(100%)!important;
-		max-width: calc(100%)!important;
-	}
-    
-</style>
 
 <div class="container-fluid">
     <div class="row mt-3 ml-3 mr-3">
@@ -116,13 +98,23 @@ function drawChart() {
             </div>
         </div>
     </div>
+    
 
-    <!-- Gráfico de Vendas -->
+    <!-- Gráfico de Vendas por Categoria (Pizza/Donut) -->
     <div class="row">
-        <div class="col-md-12 mb-3">
+        <div class="col-md-6 mb-3">
             <div class="card border-0">
                 <div class="card-body">
                     <div id="piechart" style="width: 100%; height: 350px;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gráfico de Área (Itens Pagos e Não Pagos) -->
+        <div class="col-md-6 mb-3">
+            <div class="card border-0">
+                <div class="card-body">
+                    <div id="areachart" style="width: 100%; height: 350px;"></div>
                 </div>
             </div>
         </div>
@@ -175,63 +167,3 @@ function drawChart() {
         </div>
     </div>
 </div>
-
- 
-<script>
-	$('#manage-records').submit(function(e){
-        e.preventDefault()
-        start_load()
-        $.ajax({
-            url:'ajax.php?action=save_track',
-            data: new FormData($(this)[0]),
-            cache: false,
-            contentType: false,
-            processData: false,
-            method: 'POST',
-            type: 'POST',
-            success:function(resp){
-                resp=JSON.parse(resp)
-                if(resp.status==1){
-                    alert_toast("Salvo",'success')
-                    setTimeout(function(){
-                        location.reload()
-                    },800)
-
-                }
-                
-            }
-        })
-    })
-    $('#tracking_id').on('keypress',function(e){
-        if(e.which == 13){
-            get_person()
-        }
-    })
-    $('#check').on('click',function(e){
-            get_person()
-    })
-    function get_person(){
-            start_load()
-        $.ajax({
-                url:'ajax.php?action=get_pdetails',
-                method:"POST",
-                data:{tracking_id : $('#tracking_id').val()},
-                success:function(resp){
-                    if(resp){
-                        resp = JSON.parse(resp)
-                        if(resp.status == 1){
-                            $('#name').html(resp.name)
-                            $('#address').html(resp.address)
-                            $('[name="person_id"]').val(resp.id)
-                            $('#details').show()
-                            end_load()
-
-                        }else if(resp.status == 2){
-                            alert_toast("Tracking ID desconhecido.",'danger');
-                            end_load();
-                        }
-                    }
-                }
-            })
-    }
-</script>
