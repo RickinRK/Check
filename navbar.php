@@ -14,7 +14,7 @@
 			<a href="index.php?page=home" class="nav-item nav-home"><span class='icon-field'><i class="fa fa-tachometer-alt mr-3"></i></span> Painel de controle</a>
 			
 			<a href="index.php?page=orders" class="nav-item nav-orders"><span class='icon-field'><i class="fa fa-clipboard-list mr-3"></i></span> Pedidos</a>
-			<a href="billing/index.php" class="nav-item nav-takeorders"><span class='icon-field'><i class="fa fa-list-ol mr-3"></i></span> Sistema de caixa (BETA)</a>
+			<a href="billing/index.php" class="nav-item nav-takeorders"><span class='icon-field'><i class="fa fa-list-ol mr-3"></i></span> Sistema de caixa</a>
 			<?php if($_SESSION['login_type'] == 1): ?>
 
 			<!-- <div class="mx-2 text-white">Master List</div> -->

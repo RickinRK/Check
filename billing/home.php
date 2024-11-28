@@ -126,7 +126,7 @@ endif;
             <div class="card-footer">
                 <div class="row justify-content-center">
                     <div class="btn btn btn-sm col-sm-3 btn-primary mr-2" type="button" id="pay">Pagar</div>
-                    <div class="btn btn btn-sm col-sm-3 btn-primary" type="button" id="save_order">Pagar depois</div>
+                    
                 </div>
             </div>
             </div>      			
@@ -144,7 +144,7 @@ endif;
                 <input type="hidden" name="id" value="<?php echo isset($_GET['id']) ? $_GET['id'] : '' ?>">
                 <div class="bg-white" id='o-list'>
                             <div class="d-flex w-100 bg-white mb-1">
-                                <label for="" class="text-dark"><b>Order No.</b></label>
+                                <label for="" class="text-dark"><b>N.Pedido&    ensp;</b></label>
                                 <input type="number" class="form-control-sm" name="order_number" value="<?php echo isset($order_number) ? $order_number : '' ?>" required>
                             </div>
                    <table class="table bg-light mb-5" >
@@ -349,7 +349,7 @@ endif;
     start_load()
     var amount = $('[name="total_amount"]').val()
     if($('#o-list tbody tr').length <= 0){
-        alert_toast("Please add atleast 1 product first.",'danger')
+        alert_toast("Adicione pelo menos um produto primeiro.",'danger')
         end_load()
         return false;
     }
