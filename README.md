@@ -1,5 +1,4 @@
 # **Check - Sistema de Gerenciamento**  
-### BETA V.3
 
 <p align="center">
   <img src="https://i.ibb.co/sgvq4QZ/logo.png" alt="Logo Check" width="300"/>
@@ -17,7 +16,7 @@
 ### **O que há de Novo?**
 
 - **Integração com o Azure**: O sistema agora está hospedado no Azure (Microsoft), utilizando um banco de dados MySQL. Não é mais necessário configurar o banco de dados manualmente.
-- **Inteligência Artificial Otimizada**: Estamos reconfigurando a IA para restringir seu uso ao gerenciamento interno, com suporte direto ao banco de dados via Azure.
+- **Inteligência Artificial Otimizada**: A inteligencia artificial consegue instruir o uso do usuario no sistema.
 - **Otimização do sistema**: Alguns aspectos que estavam mal otimizados foram corrigidos para melhor desempenho.
 ---
 
