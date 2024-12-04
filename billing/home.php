@@ -144,7 +144,7 @@ endif;
                 <input type="hidden" name="id" value="<?php echo isset($_GET['id']) ? $_GET['id'] : '' ?>">
                 <div class="bg-white" id='o-list'>
                             <div class="d-flex w-100 bg-white mb-1">
-                                <label for="" class="text-dark"><b>N.Pedido&    ensp;</b></label>
+                                <label for="" class="text-dark"><b>N.Pedido&ensp;</b></label>
                                 <input type="number" class="form-control-sm" name="order_number" value="<?php echo isset($order_number) ? $order_number : '' ?>" required>
                             </div>
                    <table class="table bg-light mb-5" >
