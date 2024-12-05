@@ -27,8 +27,8 @@
 - **Senha**: rootadmin
 
 #### **FUNCIONÁRIO**
-- **Usuário**: checkvasp@gmail.com  
-- **Senha**: rootstaff
+- **Usuário**: checkfuncionario@gmail.com 
+- **Senha**: funcionariocheck
 
 ---
 
